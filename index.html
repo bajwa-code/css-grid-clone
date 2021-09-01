@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Grids</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="jumbotron">
+		<img src="images/logo.png" alt="" class="logo">
+		<p class="tagline">A guide to learning CSS grid by <a href="#" class="social-link">@bajwawebtech</a></p>
+	</header>
+	<section class="section">
+		<div class="ex-heading">
+			<p class="intro"><a href="#">CSS Grid</a> is a powerful tool that allows for two-dimensional layouts to be created on the web. This guide was created as a resource to help you better understand and learn Grid, and was organized in a way I thought made the most sense when learning it.</p>
+
+			<h2>Table of Contents</h2>
+			<ol>
+				<li><a href="#grid-container">Grid Container</a></li>
+				<li><a href="#explicit-grid">Explicit Grid</a></li>
+				<li><a href="#minimum-maximum-grid-track-sizes">Minimum and Maxmum Grid Track Sizes</a></li>
+				<li><a href="#repeating-grid-tracks">Repeating Grid Tracks</a></li>
+				<li><a href="#grid-gaps">Grid Gaps (Gutters)</a></li>
+				<li><a href="#positioning-items-grid-line-numbers">Positioning Items by Grid Line Numbers</a></li>
+				<li><a href="#spanning-items-rows-columns">Spanning Items Across Rows and Columns</a></li>
+				<li><a href="#naming-grid-lines">Naming Grid Lines</a></li>
+				<li><a href="#positioning-items-line-names">Positioning Items by Line Names</a></li>
+				<li><a href="#naming-positioning-lines-same-name">Naming and Positioning Items by Lines with the Same Name</a></li>
+				<li><a href="#naming-positioning-items-grid-area">Naming and Positioning Items by Grid Areas</a></li>
+				<li><a href="#implicit-grid">Implicit Grid</a></li>
+				<li><a href="#implicitly-named-grid-areas">Implicitly Named Grid Areas</a></li>
+				<li><a href="#implicitly-named-grid-lines">Implicitly Named Grid Lines</a></li>
+				<li><a href="#layering-grid-items">Layering Grid Items</a></li>
+				<li><a href="#aligning-grid-items">Aligning Grid Items (Box Alignment)</a></li>
+				<li><a href="#aligning-grid-tracks">Aligning Grid Tracks</a></li>
+			</ol>
+		</div>
+	</section>
+
+	<!-- Section Grid Container -->
+	<section id="grid-container" class="section">
+		<header class="ex-heading">
+			<h2>Grid Container</h2>
+			<p>Create a grid container by setting the <code>display</code> property with a value of <code>grid</code> or <code>inline-grid</code>. All direct children of grid containers become grid items.</p>
+		</header>
+
+		<!-- display: grid -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">display: grid</code>
+				</div>
+				<p>Grid items are placed in rows by default and span the full width of the grid container.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-container-1 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+				</div>
+			</aside>
+		</div>
+		<!-- display: inline-grid -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">display: inline-grid</code>
+				</div>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-container-2 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">Inline Grid</div>
+					<div class="grid-item">3</div>
+				</div>
+			</aside>
+		</div>
+	</section>
+
+	<!-- Explicit Grid Section -->
+	<section id="explicit-grid" class="section">
+		<header class="ex-heading">
+			<h2>Explicit Grid</h2>
+			<p>Explicitly set a grid by creating columns and rows with the <code>grid-template-columns</code> and <code>grid-template-rows properties</code>.</p>
+		</header>
+
+		<!-- grid-template-rows -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-template-rows: 50px 100px</code>
+				</div>
+				<p>A row track is created for each value specified for <code>grid-template-rows</code>. Track size values can be any non-negative, length value (<code>px</code>, <code>%</code>, <code>em</code>, etc.)</p>
+				<p>Items 1 and 2 have fixed heights of <code>50px</code> and <code>100px</code>.</p>
+				<p>Because only 2 row tracks were defined, heights of items 3 and 4 are defined by the contents of <each class=""></each></p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-explicit-1 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- grid-template-columns -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-template-columns: 90px 50px 120px</code>
+				</div>
+					<p>Like rows, a column track is created for each value specified for <code>grid-template-columns</code>.</p>
+					<p>Items 4, 5 and 6 were placed on a new row track because only 3 column track sizes were defined; and because they were placed in column tracks 1, 2 and 3, their column sizes are equal to items 1, 2 and 3.</p>
+					<p>Grid items 1, 2 and 3 have fixed widths of <code>90px</code>, <code>50px</code> and <code>120px</code> respectively.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-explicit-2 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- grid-template-columns fr unit -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-template-columns: 1fr 1fr 2fr</code>
+				</div>
+					<p>The <code>fr</code> unit helps create flexible grid tracks. It represents a fraction of the available space in the grid container (works like Flexbox’s unitless values).</p>
+					<p>In this example, items 1 and 2 take up the first two (of four) sections while item 3 takes up the last two.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-explicit-3 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- grid-template-columns fr unit with other values -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-template-columns: 3rem 25% 1fr 2fr</code>
+				</div>
+					<p><code>fr</code> is calculated based on the remaining space when combined with other length values.</p>
+					<p>In this example, 3rem and 25% would be subtracted from the available space before the size of fr is calculated: <br><code>1fr = ((width of grid) - (3rem) - (25% of width of grid)) / 3</code></p>
+					<p></p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-explicit-4 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+				</div>
+			</aside>
+		</div>
+	</section>
+
+	<!-- Minimum and Maximum Grid Track Sizes -->
+	<section id="minimum-maximum-grid-track-sizes" class="section">
+		<header class="ex-heading">
+			<h2>Minimum and Maximum Grid Track Sizes</h2>
+			<p>Tracks sizes can be defined to have a minimum and/or maximum size with the minmax() function.</p>
+		</header>
+
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-template-rows: minmax(100px, auto);</code><br>
+					<code class="ex-code">grid-template-columns: minmax(auto, 50%) 1fr 3em;</code>
+				</div>
+				<p>The <code>minmax()</code> function accepts 2 arguments: the first is the minimum size of the track and the second the maximum size. Alongside length values, the values can also be <code>auto</code>, which allows the track to grow/stretch based on the size of the content.</p>
+				<p>In this example, the first row track is set to have a minimum height of <code>100px</code>, but its maximum size of <code>auto</code> will allow the row track to grow it the content is taller than <code>100px</code>.</p>
+				<p>The first column track has a minimum size of <code>auto</code>, but its maximum size of <code>50%</code> will prevent it from getting no wider than <code>50%</code> of the grid container width.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-minmax-1 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4. This item has more content than the others and is intentionally, unnecessarily, superfluously, uselessly, and annoyingly verbose for the sake of example. This item has more content than the others and is intentionally, unnecessarily, superfluously, uselessly, and annoyingly verbose for the sake of example.</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+				</div>
+			</aside>
+		</div>
+	</section>
+
+	<!-- Repeating Grid Tracks -->
+	<section id="repeating-grid-tracks" class="section">
+		<header class="ex-heading">
+			<h2>Repeating Grid Tracks</h2>
+			<p>Define repeating grid tracks using the <code>repeat()</code> notation. This is useful for grids with items with equal sizes or many items.</p>
+		</header>
+
+		<!-- Example-1 -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-template-rows: repeat(4, 100px);</code><br>
+					<code class="ex-code">grid-template-columns: repeat(3, 1fr);</code>
+				</div>
+				<p>The <code>repeat()</code> notation accepts 2 arguments: the first represents the number of times the defined tracks should repeat, and the second is the track definition.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-repeating-1 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+					<div class="grid-item">7</div>
+					<div class="grid-item">8</div>
+					<div class="grid-item">9</div>
+					<div class="grid-item">10</div>
+					<div class="grid-item">11</div>
+					<div class="grid-item">12</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Example-2 -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-template-columns: 30px repeat(3, 1fr) 30px;</code>
+				</div>
+				<p><code>repeat()</code> can also be used within track listings.</p>
+				<p>In this example, the first and last column tracks have widths of <code>30px</code>, and the 3 column tracks in between, created by <code>repeat()</code>, have widths of <code>1fr</code> each.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-repeating-2 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+					<div class="grid-item">7</div>
+					<div class="grid-item">8</div>
+					<div class="grid-item">9</div>
+					<div class="grid-item">10</div>
+				</div>
+			</aside>
+		</div>
+	</section>
+</body>
+</html>
