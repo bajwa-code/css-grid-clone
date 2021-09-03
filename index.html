@@ -255,5 +255,145 @@
 			</aside>
 		</div>
 	</section>
+
+	<!-- Grid Gaps (Gutters) -->
+	<section id="grid-gaps" class="section">
+		<header class="ex-heading">
+			<h2>Grid Gaps (Gutters)</h2>
+			<p>The <code>grid-column-gap</code> and <code>grid-row-gap</code> properties create gutters between columns and rows.</p>
+			<p>Grid gaps are only created in between columns and rows, and not along the edge of the grid container 🙌 .</p>
+		</header>
+
+		<!-- Example 1 -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-row-gap: 20px;</code><br>
+					<code class="ex-code">grid-column-gap: 5rem;</code>
+				</div>
+				<p>Gap size values can be any non-negative, length value (<code>px</code>, <code>%,</code> <code>em</code>, etc.)</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-gutters-1 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Example 2 -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-gap: 100px 1em;</code>
+				</div>
+				<p><code>grid-gap</code> is shorthand for <code>grid-row-gap</code> and <code>grid-column-gap</code>.</p>
+				<p>If two values are specified, the first represents <code>grid-row-gap</code> and the second <code>grid-column-gap</code>.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-gutters-2 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Example 3 -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-gap: 2rem;</code>
+				</div>
+				<p>One value sets equal row and column gaps.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-gutters-3 gg-2">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+				</div>
+			</aside>
+		</div>
+	</section>
+
+	<!-- Positioning Items by Grid Line Numbers -->
+	<section id="positioning-items-grid-line-numbers" class="section">
+		<header class="ex-heading">
+			<h2>Positioning Items by Grid Line Numbers</h2>
+			<p>Grid lines are essentially lines that represent the start of, the end of, or between column and row tracks.</p>
+			<p>Each line, starting from the start of the track and in the direction of the grid, is numbered incrementally starting from 1.</p>
+		</header>
+
+		<!-- Example 1 -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-row-start: 2;</code><br>
+					<code class="ex-code">grid-row-end: 3;</code><br>
+					<code class="ex-code">grid-column-start: 2;</code><br>
+					<code class="ex-code">grid-column-end: 3;</code>
+				</div>
+				<p>This 2-column by 3-row grid results in 3 column lines and 4 row lines. Item 1 was repositioned by row and column line numbers.</p>
+				<p>If an item spans only one row or column, <code>grid-row/column-end</code> is not necessary.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-position-number-1 gg-2">
+					<div class="grid-item ex-color">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+					<div class="ex__lines">
+						<div class="y-axis l-0"><span class="t-50">1</span></div>
+						<div class="y-axis l-50 ml--y"><span class="t-50 l--5rem">2</span></div>
+						<div class="y-axis r-0"><span class="t-50 r-0">3</span></div>
+						<div class="x-axis"><span class="l-75 t-6rem">1</span></div>
+						<div class="x-axis t-33"><span class="l-75">2</span></div>
+						<div class="x-axis t-66 mt-x"><span class="l-75">3</span></div>
+						<div class="x-axis b-0"><span class="l-75 b--6rem">4</span></div>
+					</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Example 2 -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-row: 2;</code><br>
+					<code class="ex-code">grid-column: 3 / 4;</code>
+				</div>
+				<p><code>grid-row</code> is shorthand for <code>grid-row-start</code> and <code>grid-row-end</code>.</p>
+				<p><code>grid-column</code> is shorthand for <code>grid-column-start</code> and <code>grid-column-end</code>.</p>
+				<p>If one value is provided, it specifies <code>grid-row/column-start</code>.</p>
+				<p>If two values are specified, the first value corresponds to <code>grid-row/column-start</code> and the second <code>grid-row/column-end</code>, and must be separated by a forward slash <code>/</code>.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-position-number-2 gg-2">
+					<div class="grid-item ex-color">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+					<div class="ex__lines">
+						<div class="x-axis"><span class="l-50x t-6rem">1</span></div>
+						<div class="x-axis t-50 mt--x"><span class="l-50x">2</span></div>
+						<div class="x-axis b-0"><span class="l-50x b--5rem">3</span></div>
+						<div class="y-axis l-0"><span class="t-50">1</span></div>
+						<div class="y-axis l-33"><span class="t-50 l--5rem">2</span></div>
+						<div class="y-axis l-66 ml-y"><span class="t-50 l--5rem">3</span></div>
+						<div class="y-axis r-0"><span class="t-50 r-0">4</span></div>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</section>
 </body>
 </html>
