@@ -82,8 +82,10 @@ code {
 
 @media screen and (min-width: 40em) {
 	.ex {
+		margin: 0 auto;
+		max-width: 65em;
 		grid-template-columns: 50% 1fr;
-		grid-column-gap: 2rem;
+		grid-column-gap: 3rem;
 	}
 }
 
@@ -124,3 +126,73 @@ code {
 	border-radius: 0.2rem;
 }
 
+.ex-color {
+	background: #009688;
+}
+
+/*Y-axis lines*/
+.l-0 {left: 0;}
+.l-50 {left: 50%;}
+.l-33 {left: 33%;}
+.l-66 {left: 66%;}
+.l--5rem {left: -.5rem;}
+.b--5rem {bottom: -.5rem;}
+.r-0 {right: 0;}
+.ml-y {margin-left: .09375rem;}
+.ml--y {margin-left: -.09375rem;}
+.mt--x {margin-top: -.09375rem;}
+.t-50 {top: 50%;}
+
+.ex__lines {
+	content: '';
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.y-axis {
+	/*display: block;*/
+	position: absolute;
+	width: .1875rem;
+	height: 100%;
+}
+
+.y-axis {
+	background: #303f9f;
+}
+
+span {
+	position: absolute;
+	font-size: .6875em;
+	padding: .2rem .4rem;
+	text-align: center;
+	border-radius: .2rem;
+	background: #303f9f;
+	color: whitesmoke;
+	transform: translateY(-50%);
+}
+
+/*X-axis lins*/
+.l-50x {left: 48%;}
+.l-75 {left: 75%;}
+.t-33 {top: 33%;}
+.t-66 {top: 66%;}
+.b-0 {bottom: 0;}
+.t-6rem {top: .6rem;}
+.b--6rem {bottom: -.6rem;}
+.mt-x {margin-top: .09375rem;}
+
+
+.x-axis {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: .1875rem;
+	background: #4fc3f7;
+}
+
+.x-axis span {
+	background: #4fc3f7;
+	color: #3f51b5;
+}
