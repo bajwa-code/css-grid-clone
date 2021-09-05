@@ -45,7 +45,7 @@
 			<p>Create a grid container by setting the <code>display</code> property with a value of <code>grid</code> or <code>inline-grid</code>. All direct children of grid containers become grid items.</p>
 		</header>
 
-		<!-- display: grid -->
+		<!-- First example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -61,7 +61,8 @@
 				</div>
 			</aside>
 		</div>
-		<!-- display: inline-grid -->
+
+		<!-- Second example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -85,7 +86,7 @@
 			<p>Explicitly set a grid by creating columns and rows with the <code>grid-template-columns</code> and <code>grid-template-rows properties</code>.</p>
 		</header>
 
-		<!-- grid-template-rows -->
+		<!-- First example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -105,7 +106,7 @@
 			</aside>
 		</div>
 
-		<!-- grid-template-columns -->
+		<!-- Second example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -127,7 +128,7 @@
 			</aside>
 		</div>
 
-		<!-- grid-template-columns fr unit -->
+		<!-- Third example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -145,7 +146,7 @@
 			</aside>
 		</div>
 
-		<!-- grid-template-columns fr unit with other values -->
+		<!-- Fourth example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -173,6 +174,7 @@
 			<p>Tracks sizes can be defined to have a minimum and/or maximum size with the minmax() function.</p>
 		</header>
 
+		<!-- First example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -203,7 +205,7 @@
 			<p>Define repeating grid tracks using the <code>repeat()</code> notation. This is useful for grids with items with equal sizes or many items.</p>
 		</header>
 
-		<!-- Example-1 -->
+		<!-- First example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -230,7 +232,7 @@
 			</aside>
 		</div>
 
-		<!-- Example-2 -->
+		<!-- Second example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -264,7 +266,7 @@
 			<p>Grid gaps are only created in between columns and rows, and not along the edge of the grid container 🙌 .</p>
 		</header>
 
-		<!-- Example 1 -->
+		<!-- First example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -283,7 +285,7 @@
 			</aside>
 		</div>
 
-		<!-- Example 2 -->
+		<!-- Second example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -302,7 +304,7 @@
 			</aside>
 		</div>
 
-		<!-- Example 3 -->
+		<!-- Third example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -329,7 +331,7 @@
 			<p>Each line, starting from the start of the track and in the direction of the grid, is numbered incrementally starting from 1.</p>
 		</header>
 
-		<!-- Example 1 -->
+		<!-- First example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -362,7 +364,7 @@
 			</aside>
 		</div>
 
-		<!-- Example 2 -->
+		<!-- Second example -->
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
@@ -391,6 +393,99 @@
 						<div class="y-axis l-66 ml-y"><span class="t-50 l--5rem">3</span></div>
 						<div class="y-axis r-0"><span class="t-50 r-0">4</span></div>
 					</div>
+				</div>
+			</aside>
+		</div>
+	</section>
+
+	<!-- Spanning Items Across Rows and Columns -->
+	<section id="spanning-items-rows-columns" class="section">
+		<header class="ex-heading">
+			<h2>Spanning Items Across Rows and Columns</h2>
+			<p>Grid items span only one column and row track by default, but can span multiple row and/or column tracks using the same properties to position them.</p>
+		</header>
+
+		<!-- First example -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-column-start: 1;</code><br>
+					<code class="ex-code">grid-column-end:   4;</code>
+				</div>
+				<p>Set a grid item to span more than one column track by setting <code>grid-column-end</code> to a column line number that is more than one column away from <code>grid-column-start</code>.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-spanning-1 gg-2">
+					<div class="grid-item ex-color">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Second example -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-row-start: 1;</code><br>
+					<code class="ex-code">grid-row-end:   4;</code>
+				</div>
+				<p>Grid items can also span across multiple row tracks by setting <code>grid-row-end</code> to more than one row track away.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-spanning-2 gg-2">
+					<div class="grid-item ex-color">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+					<div class="grid-item">7</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Third example -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-row:    2 / 5;</code><br>
+					<code class="ex-code">grid-column: 2 / 4;</code>
+				</div>
+				<p>Shorthand properties <code>grid-row</code> and <code>grid-column</code> can also be used to position and span grid items more than one row or column.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-spanning-3 gg-2">
+					<div class="grid-item ex-color">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+					<div class="grid-item">7</div>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Fourth example -->
+		<div class="ex">
+			<section class="ex-section">
+				<div class="ex-code-mb">
+					<code class="ex-code">grid-row:    2 / span 3;</code><br>
+					<code class="ex-code">grid-column: span 2;</code>
+				</div>
+				<p>The keyword <code>span</code>, followed by the # of columns or rows to span, can also be used.</p>
+			</section>
+			<aside class="ex-aside">
+				<div class="ex-spanning-4 gg-2">
+					<div class="grid-item ex-color">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+					<div class="grid-item">7</div>
 				</div>
 			</aside>
 		</div>
