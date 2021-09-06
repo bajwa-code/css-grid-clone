@@ -4,12 +4,14 @@ html {
 }
 .home {
 	position: fixed;
-	width: 4em;
-	height: 4em	;
+	width: 3.4em;
+	height: 3.4em;
 	background-color: red;
-	top: 86%;
-	left: 93%;
+	top: 84%;
+	left: 4%;
+	border-radius: 50%;
 	opacity: .7;
+	z-index: 3;
 }
 
 
