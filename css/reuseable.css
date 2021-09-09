@@ -90,10 +90,21 @@ code {
 	}
 }
 
-.ex-code-mb {
+/*pre {
 	display: block;
-	/*max-width: 50%;*/
+	overflow: scroll;
+	overflow-y: hidden;
+	white-space: pre;
+}*/
+
+.ex-section {
+	max-width: 95vw;
+}
+
+.ex-code-mb {
 	margin-bottom: 1.5rem;
+	display: block;
+	/*max-width: 90vw;*/
 	padding-bottom: .5rem;
 	white-space: nowrap;
 	overflow-x: auto;
