@@ -91,6 +91,7 @@ code {
 }
 
 .ex-code-mb {
+	display: block;
 	/*max-width: 50%;*/
 	margin-bottom: 1.5rem;
 	padding-bottom: .5rem;
