@@ -27,7 +27,7 @@ body {
 
 h1, h2 , h3 {
 	font-weight: 700;
-	font-size: 22px;
+	font-size: 24px;
 	line-height: 29px;
 	color: var(--clr-heading);
 	margin-bottom: 1.4rem;
@@ -55,6 +55,11 @@ a:focus {
 
 code {
 	color: #5c6bc0;
+}
+
+.ex-section span {
+	all: unset;
+	color: #E91E63;
 }
 
 .border {
@@ -164,6 +169,7 @@ code {
 .t--5rem {
 	top: -.5rem;
 }
+.t--1rem { top: -1rem;}
 .b--5rem {bottom: -.5rem;}
 .t-6rem {top: .6rem;}
 .b--6rem {bottom: -.6rem;}
@@ -215,6 +221,7 @@ span {
 }
 
 .x-axis span {
+	max-width: 4.4rem;
 	background: #4fc3f7;
 	color: #3f51b5;
 	transform: translateX(-50%);
