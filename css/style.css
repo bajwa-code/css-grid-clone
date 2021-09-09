@@ -214,9 +214,22 @@ html {
 	height: 14em;
 }
 
+/* Positioning Items by Line Names */
+/* First example */
+.ex-linenames-1 {
+	position: relative;
+	grid-template-rows:  [row-1-start] 1fr [row-2-start] 1fr [row-end];
+	grid-template-columns: [col-1-start] 1fr [col-2-start] 1fr [col-3-start] 1fr [col-end];
+	display: grid;
+}
 
-
-
+.ex-linenames-1 .grid-item:first-child {
+	grid-row-start: row-2-start;
+	grid-row-end: row-end;
+	grid-column-start: col-2-start;
+	grid-column-end: col-end;
+	height: 8em;
+}
 
 
 
