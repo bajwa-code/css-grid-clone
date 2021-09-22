@@ -212,7 +212,7 @@
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
-					<code class="ex-code">grid-template-rows: repeat(4, 100px);</code><br>
+					<code class="ex-code">grid-template-rows: repeat(3, 100px);</code><br>
 					<code class="ex-code">grid-template-columns: repeat(3, 1fr);</code>
 				</div>
 				<p>The <code>repeat()</code> notation accepts 2 arguments: the first represents the number of times the defined tracks should repeat, and the second is the track definition.</p>
@@ -228,9 +228,6 @@
 					<div class="grid-item">7</div>
 					<div class="grid-item">8</div>
 					<div class="grid-item">9</div>
-					<div class="grid-item">10</div>
-					<div class="grid-item">11</div>
-					<div class="grid-item">12</div>
 				</div>
 			</aside>
 		</div>
@@ -239,7 +236,7 @@
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
-					<code class="ex-code">grid-template-columns: 30px repeat(3, 1fr) 30px;</code>
+					<code class="ex-code">grid-template-columns: 70px repeat(2, 1fr) 70px;</code>
 				</div>
 				<p><code>repeat()</code> can also be used within track listings.</p>
 				<p>In this example, the first and last column tracks have widths of <code>30px</code>, and the 3 column tracks in between, created by <code>repeat()</code>, have widths of <code>1fr</code> each.</p>
@@ -254,8 +251,6 @@
 					<div class="grid-item">6</div>
 					<div class="grid-item">7</div>
 					<div class="grid-item">8</div>
-					<div class="grid-item">9</div>
-					<div class="grid-item">10</div>
 				</div>
 			</aside>
 		</div>
@@ -340,8 +335,8 @@
 				<div class="ex-code-mb">
 					<code class="ex-code">grid-row-start: 2;</code><br>
 					<code class="ex-code">grid-row-end: 3;</code><br>
-					<code class="ex-code">grid-column-start: 2;</code><br>
-					<code class="ex-code">grid-column-end: 3;</code>
+					<code class="ex-code">grid-column-start: 1;</code><br>
+					<code class="ex-code">grid-column-end: 2;</code>
 				</div>
 				<p>This 2-column by 3-row grid results in 3 column lines and 4 row lines. Item 1 was repositioned by row and column line numbers.</p>
 				<p>If an item spans only one row or column, <code>grid-row/column-end</code> is not necessary.</p>
@@ -404,7 +399,7 @@
 		<div class="ex">
 			<section class="ex-section">
 				<div class="ex-code-mb">
-					<code class="ex-code">grid-area: 2 / 2 / 3 / 3</code>
+					<code class="ex-code">grid-area: 2 / 1 / 3 / 2</code>
 				</div>
 				<p><code>grid-area</code> is shorthand for <code>grid-row-start</code>, <code>grid-column-start</code>, <code>grid-row-end</code> and <code>grid-column-end</code>.</p>
 				<p>If four values are specified, the first corresponds to <code>grid-row-start</code>, the second <code>grid-column-start</code>, the third <code>grid-row-end</code> and the fourth <code>grid-column-end</code>.</p>
