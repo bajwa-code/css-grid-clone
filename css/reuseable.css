@@ -34,12 +34,12 @@ h1, h2 , h3 {
 	margin-bottom: 1.4rem;
 }
 
-p, a {
+p, a, li {
 	font-size: 17px;
 	line-height: 26px;
 }
 
-p {
+p, ul {
 	color: var(--clr-text);
 	margin-bottom: 2rem;
 }
@@ -56,6 +56,11 @@ a:focus {
 
 code {
 	color: #5c6bc0;
+}
+
+.index {
+	z-index: 10;
+	background-color: inherit;
 }
 
 .ex-section span {
@@ -124,6 +129,7 @@ code {
 }
 
 .ex-aside {
+	position: relative;
 	border: var(--border-all);
 	border-radius: 0.2rem;
 	min-height: 18rem;
@@ -227,4 +233,12 @@ span {
 	background: #4fc3f7;
 	color: #3f51b5;
 	transform: translateX(-50%);
+}
+
+
+.ex-area {
+	background: #009688;
+	position: absolute;
+	top: 0.8rem;
+	left: 0;
 }
